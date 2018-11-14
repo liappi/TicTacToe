@@ -13,30 +13,35 @@ namespace TicTacToe {
             gameBoard.displayGameBoard();
 
             while (!gameBoard.gameEnded) {
-                player1.getPlayerInput();
-
-//                while (!player1.inputValid) {
-//                    
-//                }
-
-                if (gameBoard.playerInputIsValid(player1.row, player1.col)) {
-                    gameBoard.updateGameBoardWithPlayerInput(player1.playerNumber, player1.row, player1.col);
-                }
-                else {
-                    Console.WriteLine("Invalid input.");
-                }
-
+                
+                while (!player1.inputValid) {
+                    
+                    player1.getPlayerInput();
+                    
+                    if (gameBoard.playerInputIsValid(player1.row, player1.col)) {
+                        player1.inputValid = true;
+                        gameBoard.updateGameBoardWithPlayerInput(player1.playerNumber, player1.row, player1.col);
+                    }
+                    else {
+                        Console.WriteLine("Invalid input. Please try again.");
+                    }
+                }               
+                player1.inputValid = false;
                 gameBoard.displayGameBoard();
-
-                player2.getPlayerInput();
-
-                if (gameBoard.playerInputIsValid(player2.row, player2.col)) {
-                    gameBoard.updateGameBoardWithPlayerInput(player2.playerNumber, player2.row, player2.col);
-                }
-                else {
-                    Console.WriteLine("Invalid input.");
-                }
-
+                
+                while (!player2.inputValid) {
+                    
+                    player2.getPlayerInput();
+                    
+                    if (gameBoard.playerInputIsValid(player2.row, player2.col)) {
+                        player2.inputValid = true;
+                        gameBoard.updateGameBoardWithPlayerInput(player2.playerNumber, player2.row, player2.col);
+                    }
+                    else {
+                        Console.WriteLine("Invalid input. Please try again.");
+                    }
+                }                
+                player2.inputValid = false;
                 gameBoard.displayGameBoard();
             }
         }
