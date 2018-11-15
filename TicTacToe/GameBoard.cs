@@ -4,22 +4,11 @@ using Microsoft.SqlServer.Server;
 namespace TicTacToe {
     public class GameBoard {
 
-        public enum Winner {
-            None,
-            Player1,
-            Player2
-        };
-
         private char[,] board;
         const int dimension = 3;
-        public bool gameEnded;
-        public Winner winner;
-        
        
         public GameBoard() {
             board = new char[dimension, dimension];
-            gameEnded = false;
-            winner = Winner.None;
 
             for (var i = 0; i < dimension; i++) {
                 for (var j = 0; j < dimension; j++) {
@@ -39,13 +28,10 @@ namespace TicTacToe {
         }
 
         public bool playerInputIsValid(int row, int col) {
-            if (row <= dimension && row > 0 &&
-                col <= dimension && col > 0 &&
-                board[row - 1, col - 1].Equals('.')) {
-                return true;
-            }
-
-            return false;
+            Console.WriteLine("Move accepted, here's the current board:");
+            return row <= dimension && row > 0 &&
+                   col <= dimension && col > 0 &&
+                   board[row - 1, col - 1].Equals('.');
         }
 
         public void updateGameBoardWithPlayerInput(int player, int row, int col) {
@@ -57,28 +43,7 @@ namespace TicTacToe {
             }
         }
 
-        public void updateGameWinCondition() {
-            if (gameIsDrawn()) {
-                gameEnded = true;
-            }
-            else if (rowIsFilledWithSameCharacter('X') || 
-                    columnIsFilledWithSameCharacter('X') || 
-                    diagonalIsFilledWithSameCharacter('X')) {
-
-                gameEnded = true;
-                winner = Winner.Player1;
-            }
-            else if (rowIsFilledWithSameCharacter('O') || 
-                     columnIsFilledWithSameCharacter('O') || 
-                     diagonalIsFilledWithSameCharacter('O')) {
-                    
-                gameEnded = true;
-                winner = Winner.Player2;
-            }
-        }
-
-
-        private bool rowIsFilledWithSameCharacter(char c) {
+        public bool rowIsFilledWithSameCharacter(char c) {
             for (var i = 0; i < dimension; i++) {
                 if (board[i, 0].Equals(c) &&
                     board[i, 1].Equals(c) &&
@@ -90,7 +55,7 @@ namespace TicTacToe {
             return false;
         }
 
-        private bool columnIsFilledWithSameCharacter(char c) {
+        public bool columnIsFilledWithSameCharacter(char c) {
             for (var j = 0; j < dimension; j++) {
                 if (board[0, j].Equals(c) &&
                     board[1, j].Equals(c) &&
@@ -102,15 +67,15 @@ namespace TicTacToe {
             return false;
         }
 
-        private bool diagonalIsFilledWithSameCharacter(char c) {
+        public bool diagonalIsFilledWithSameCharacter(char c) {
             return (board[0, 0].Equals(c) && board[1, 1].Equals(c) && board[2, 2].Equals(c)) ||
                    (board[0, 2].Equals(c) && board[1, 1].Equals(c) && board[2, 0].Equals(c));
         }
 
-        private bool gameIsDrawn() {
+        public bool gameIsDrawn() {
             for (var i = 0; i < dimension; i++) {
                 for (var j = 0; j < dimension; j++) {
-                    if (board[i, j] != '.') {
+                    if (board[i, j].Equals('.')) {
                         return false;
                     }
                 }
