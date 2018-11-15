@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="235b5979-2e88-49df-8c4f-02edda6793e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/GameBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/GameBoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/bin/Debug/TicTacToe.pdb" afterDir="false" />
@@ -36,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1925" />
+          <entry key="cs" value="3091" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1925" />
+          <entry key="C#" value="3091" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -50,47 +50,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+            <state relative-caret-position="120">
+              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding>
-                <marker date="1542162667705" expanded="true" signature="35:1822" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="64:1820" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="113:1814" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="446:1804" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="509:1013" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="679:867" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="867:995" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="1180:1684" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="1350:1538" ph="{...}" />
-                <marker date="1542162667705" expanded="true" signature="1538:1666" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="6:51" ph="..." />
+                <marker date="1542240689554" expanded="true" signature="73:2523" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="102:2521" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="151:2515" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="534:2044" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="621:1125" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="791:979" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="979:1107" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="1368:1872" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="1538:1726" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="1726:1854" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="2110:2188" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="2261:2340" ph="{...}" />
+                <marker date="1542240689554" expanded="true" signature="2413:2492" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe/GameBoard.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+            <state relative-caret-position="1245">
+              <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
               <folding>
-                <marker date="1542162667732" expanded="true" signature="6:47" ph="..." />
-                <marker date="1542162667732" expanded="true" signature="69:1365" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="98:1363" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="223:493" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="357:483" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="411:469" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="534:767" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="584:757" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="638:705" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="826:1056" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="975:1019" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="1139:1339" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="1170:1232" ph="{...}" />
-                <marker date="1542162667732" expanded="true" signature="1267:1329" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="6:47" ph="..." />
+                <marker date="1542240398312" expanded="true" signature="69:3525" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="98:3523" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="128:198" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="370:674" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="538:664" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="592:650" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="715:948" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="765:938" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="819:886" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1007:1237" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1156:1200" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1320:1520" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1351:1413" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1448:1510" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1567:2225" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1600:1649" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="1830:1921" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2104:2215" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2286:2579" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2336:2538" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2472:2524" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2642:2935" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2692:2894" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="2828:2880" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="3000:3201" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="3238:3517" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="3288:3481" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="3342:3467" ph="{...}" />
+                <marker date="1542240398312" expanded="true" signature="3388:3449" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -99,13 +119,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
               <folding>
-                <marker date="1542161687795" expanded="true" signature="35:620" ph="{...}" />
-                <marker date="1542161687795" expanded="true" signature="61:618" ph="{...}" />
-                <marker date="1542161687795" expanded="true" signature="226:315" ph="{...}" />
-                <marker date="1542161687795" expanded="true" signature="354:612" ph="{...}" />
+                <marker date="1542163044059" expanded="true" signature="35:606" ph="{...}" />
+                <marker date="1542163044059" expanded="true" signature="61:604" ph="{...}" />
+                <marker date="1542163044059" expanded="true" signature="226:315" ph="{...}" />
+                <marker date="1542163044059" expanded="true" signature="354:598" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -142,8 +162,8 @@
       <list>
         <option value="$PROJECT_DIR$/TestTicTacToe/Tests.cs" />
         <option value="$PROJECT_DIR$/TicTacToe/Player.cs" />
-        <option value="$PROJECT_DIR$/TicTacToe/Program.cs" />
         <option value="$PROJECT_DIR$/TicTacToe/GameBoard.cs" />
+        <option value="$PROJECT_DIR$/TicTacToe/Program.cs" />
       </list>
     </option>
   </component>
@@ -231,12 +251,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542142804889</updated>
-      <workItem from="1542142807603" duration="9191000" />
+      <workItem from="1542142807603" duration="15609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9191000" />
+    <option name="totallyTimeSpent" value="15609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -264,7 +284,7 @@
       <window_info anchor="bottom" id="Build" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2060241" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.063855425" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -310,55 +330,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="255">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding>
-            <marker date="1542161687795" expanded="true" signature="35:620" ph="{...}" />
-            <marker date="1542161687795" expanded="true" signature="61:618" ph="{...}" />
-            <marker date="1542161687795" expanded="true" signature="226:315" ph="{...}" />
-            <marker date="1542161687795" expanded="true" signature="354:612" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding>
-            <marker date="1542162667705" expanded="true" signature="35:1822" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="64:1820" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="113:1814" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="446:1804" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="509:1013" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="679:867" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="867:995" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="1180:1684" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="1350:1538" ph="{...}" />
-            <marker date="1542162667705" expanded="true" signature="1538:1666" ph="{...}" />
+            <marker date="1542163044059" expanded="true" signature="35:606" ph="{...}" />
+            <marker date="1542163044059" expanded="true" signature="61:604" ph="{...}" />
+            <marker date="1542163044059" expanded="true" signature="226:315" ph="{...}" />
+            <marker date="1542163044059" expanded="true" signature="354:598" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/GameBoard.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        <state relative-caret-position="1245">
+          <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
           <folding>
-            <marker date="1542162667732" expanded="true" signature="6:47" ph="..." />
-            <marker date="1542162667732" expanded="true" signature="69:1365" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="98:1363" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="223:493" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="357:483" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="411:469" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="534:767" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="584:757" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="638:705" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="826:1056" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="975:1019" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="1139:1339" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="1170:1232" ph="{...}" />
-            <marker date="1542162667732" expanded="true" signature="1267:1329" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="6:47" ph="..." />
+            <marker date="1542240398312" expanded="true" signature="69:3525" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="98:3523" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="128:198" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="370:674" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="538:664" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="592:650" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="715:948" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="765:938" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="819:886" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1007:1237" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1156:1200" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1320:1520" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1351:1413" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1448:1510" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1567:2225" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1600:1649" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="1830:1921" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2104:2215" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2286:2579" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2336:2538" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2472:2524" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2642:2935" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2692:2894" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="2828:2880" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="3000:3201" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="3238:3517" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="3288:3481" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="3342:3467" ph="{...}" />
+            <marker date="1542240398312" expanded="true" signature="3388:3449" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <marker date="1542240689554" expanded="true" signature="6:51" ph="..." />
+            <marker date="1542240689554" expanded="true" signature="73:2523" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="102:2521" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="151:2515" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="534:2044" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="621:1125" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="791:979" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="979:1107" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="1368:1872" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="1538:1726" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="1726:1854" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="2110:2188" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="2261:2340" ph="{...}" />
+            <marker date="1542240689554" expanded="true" signature="2413:2492" ph="{...}" />
           </folding>
         </state>
       </provider>

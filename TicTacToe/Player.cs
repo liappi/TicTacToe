@@ -20,8 +20,6 @@ namespace TicTacToe {
             row = int.Parse(Console.ReadLine());
             Console.Write("col:");
             col = int.Parse(Console.ReadLine());
-
-            
         }
     }
 }

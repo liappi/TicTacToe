@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace TicTacToe {
     internal class Program {
@@ -7,6 +8,8 @@ namespace TicTacToe {
             var player1 = new Player(1);
             var player2 = new Player(2);
 
+            var playerWithCurrentTurn = player1;
+
             Console.WriteLine("Welcome to Tic Tac Toe!");
             Console.WriteLine("Here's the current board:");
 
@@ -14,7 +17,7 @@ namespace TicTacToe {
 
             while (!gameBoard.gameEnded) {
                 
-                while (!player1.inputValid) {
+                while (!player1.inputValid && !gameBoard.gameEnded) {
                     
                     player1.getPlayerInput();
                     
@@ -28,8 +31,9 @@ namespace TicTacToe {
                 }               
                 player1.inputValid = false;
                 gameBoard.displayGameBoard();
+                gameBoard.updateGameWinCondition();
                 
-                while (!player2.inputValid) {
+                while (!player2.inputValid && !gameBoard.gameEnded) {
                     
                     player2.getPlayerInput();
                     
@@ -43,7 +47,19 @@ namespace TicTacToe {
                 }                
                 player2.inputValid = false;
                 gameBoard.displayGameBoard();
+                gameBoard.updateGameWinCondition();
             }
+
+            if (gameBoard.winner.Equals(GameBoard.Winner.None)) {
+                Console.WriteLine("The game has been drawn.");
+            }
+            else if (gameBoard.winner.Equals(GameBoard.Winner.Player1)) {
+                Console.WriteLine("The winner is player one.");
+            }
+            else if (gameBoard.winner.Equals(GameBoard.Winner.Player2)) {
+                Console.WriteLine("The winner is player two.");
+            }
+            
         }
     }
 }
