@@ -16,50 +16,35 @@ namespace TicTacToe {
             gameBoard.displayGameBoard();
 
             while (!gameBoard.gameEnded) {
-                
-                while (!player1.inputValid && !gameBoard.gameEnded) {
+
+                while (!playerWithCurrentTurn.inputValid) {
+                    playerWithCurrentTurn.getPlayerInput();
                     
-                    player1.getPlayerInput();
-                    
-                    if (gameBoard.playerInputIsValid(player1.row, player1.col)) {
-                        player1.inputValid = true;
-                        gameBoard.updateGameBoardWithPlayerInput(player1.playerNumber, player1.row, player1.col);
+                    if (gameBoard.playerInputIsValid(playerWithCurrentTurn.row, playerWithCurrentTurn.col)) {
+                        playerWithCurrentTurn.inputValid = true;
+                        gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.playerNumber, playerWithCurrentTurn.row, playerWithCurrentTurn.col);
                     }
                     else {
                         Console.WriteLine("Invalid input. Please try again.");
                     }
-                }               
-                player1.inputValid = false;
+                }
+                playerWithCurrentTurn.inputValid = false;
                 gameBoard.displayGameBoard();
                 gameBoard.updateGameWinCondition();
-                
-                while (!player2.inputValid && !gameBoard.gameEnded) {
-                    
-                    player2.getPlayerInput();
-                    
-                    if (gameBoard.playerInputIsValid(player2.row, player2.col)) {
-                        player2.inputValid = true;
-                        gameBoard.updateGameBoardWithPlayerInput(player2.playerNumber, player2.row, player2.col);
-                    }
-                    else {
-                        Console.WriteLine("Invalid input. Please try again.");
-                    }
-                }                
-                player2.inputValid = false;
-                gameBoard.displayGameBoard();
-                gameBoard.updateGameWinCondition();
+
+                if (playerWithCurrentTurn.Equals(player1)) {
+                    playerWithCurrentTurn = player2;
+                }
+                else if (playerWithCurrentTurn.Equals(player2)) {
+                    playerWithCurrentTurn = player1;
+                }
             }
 
-            if (gameBoard.winner.Equals(GameBoard.Winner.None)) {
+            if (gameBoard.winner == GameBoard.Winner.None)
                 Console.WriteLine("The game has been drawn.");
-            }
-            else if (gameBoard.winner.Equals(GameBoard.Winner.Player1)) {
+            else if (gameBoard.winner == GameBoard.Winner.Player1)
                 Console.WriteLine("The winner is player one.");
-            }
-            else if (gameBoard.winner.Equals(GameBoard.Winner.Player2)) {
-                Console.WriteLine("The winner is player two.");
-            }
-            
+            else if (gameBoard.winner == GameBoard.Winner.Player2) Console.WriteLine("The winner is player two.");
         }
     }
 }
