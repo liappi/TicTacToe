@@ -5,7 +5,7 @@ namespace TicTacToe {
     public class GameBoard {
 
         private char[,] board;
-        const int dimension = 3;
+        private const int dimension = 3;
        
         public GameBoard() {
             board = new char[dimension, dimension];
@@ -28,7 +28,6 @@ namespace TicTacToe {
         }
 
         public bool playerInputIsValid(int row, int col) {
-            Console.WriteLine("Move accepted, here's the current board:");
             return row <= dimension && row > 0 &&
                    col <= dimension && col > 0 &&
                    board[row - 1, col - 1].Equals('.');

@@ -38,10 +38,13 @@ namespace TicTacToe {
                     playerWithCurrentTurn.getPlayerInput();
 
                     if (playerWithCurrentTurn.givenUp) {
+                        Console.WriteLine($"Player {playerWithCurrentTurn.playerNumber} has given up.");
                         return;
                     }
 
                     if (gameBoard.playerInputIsValid(playerWithCurrentTurn.row, playerWithCurrentTurn.col)) {
+                        Console.WriteLine("Move accepted, here's the current board:");
+                        
                         playerWithCurrentTurn.inputValid = true;
                         gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.playerNumber,
                             playerWithCurrentTurn.row, playerWithCurrentTurn.col);
@@ -98,7 +101,7 @@ namespace TicTacToe {
             }
         }
 
-        public void End() {
+        private void End() {
             if (winner == Winner.None)
                 Console.WriteLine("The game is a draw.");
             else if (winner == Winner.Player1)

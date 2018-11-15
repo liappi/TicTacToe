@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace TicTacToe {
     public class Player {
@@ -29,12 +30,20 @@ namespace TicTacToe {
 
             if (input.Equals("q")) {
                 givenUp = true;
-                Console.WriteLine($"Player {playerNumber} has given up.");
-            } else if (input.Contains(",")) {
-                var coordinates = input.Split(',');
-                col = Convert.ToInt32(coordinates[0]);
-                row = Convert.ToInt32(coordinates[1]);
+            } 
+            else if (input.Contains(",")) {
+                updateRowAndCol(input);
             }
+            else {
+                col = 0;
+                row = 0;
+            }
+        }
+
+        private void updateRowAndCol(string input) {
+            var coordinates = input.Split(',');
+            col = Convert.ToInt32(coordinates[0]);
+            row = Convert.ToInt32(coordinates[1]);
         }
     }
 }
