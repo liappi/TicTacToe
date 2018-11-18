@@ -33,13 +33,15 @@ namespace TicTacToe {
                    board[row - 1, col - 1].Equals('.');
         }
 
-        public void updateGameBoardWithPlayerInput(int player, int row, int col) {
-            if (player == 1) {
-                board[row - 1, col - 1] = 'X';
-            }
-            else if (player == 2) {
-                board[row - 1, col - 1] = 'O';
-            }
+        public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
+//            if (player == 1) {
+//                board[row - 1, col - 1] = 'X';
+//            }
+//            else if (player == 2) {
+//                board[row - 1, col - 1] = 'O';
+//            }
+            
+            board[row - 1, col - 1] = symbol;
         }
 
         public bool hasRowWin(char c) {

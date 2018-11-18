@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TicTacToe {
     public class Game {
@@ -22,13 +23,11 @@ namespace TicTacToe {
             winner = Winner.None;
             
             gameBoard = new GameBoard();
-            var player1 = new Player('X');
-            var player2 = new Player('O');
             
-            players.Add(player1);
-            players.Add(player2);
+            players.Add(new Player('X'));
+            players.Add(new Player('O'));
 
-            playerWithCurrentTurn = player1;
+            playerWithCurrentTurn = players[0];
         }
 
         public void Start() {
@@ -43,7 +42,8 @@ namespace TicTacToe {
                     playerWithCurrentTurn.getPlayerInput();
 
                     if (playerWithCurrentTurn.givenUp) {
-                        Console.WriteLine($"Player {playerWithCurrentTurn.playerNumber} has given up.");
+                        Console.WriteLine($"Player has given up.");
+//                        Console.WriteLine($"Player {playerWithCurrentTurn.playerNumber} has given up.");
                         return;
                     }
 
@@ -51,7 +51,7 @@ namespace TicTacToe {
                         Console.WriteLine("Move accepted, here's the current board:");
                         
                         playerWithCurrentTurn.inputValid = true;
-                        gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.playerNumber,
+                        gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.symbol,
                             playerWithCurrentTurn.row, playerWithCurrentTurn.col);
                     }
                     else {

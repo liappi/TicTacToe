@@ -8,7 +8,7 @@ namespace TicTacToe {
         public int col;
         public bool inputValid;
         public bool givenUp;
-        private char symbol;
+        public char symbol;
 
         public Player(char symbol) {
             inputValid = false;
