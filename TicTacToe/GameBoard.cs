@@ -42,7 +42,7 @@ namespace TicTacToe {
             }
         }
 
-        public bool rowIsFilledWithSameCharacter(char c) {
+        public bool hasRowWin(char c) {
             for (var i = 0; i < dimension; i++) {
                 if (board[i, 0].Equals(c) &&
                     board[i, 1].Equals(c) &&
@@ -54,7 +54,7 @@ namespace TicTacToe {
             return false;
         }
 
-        public bool columnIsFilledWithSameCharacter(char c) {
+        public bool hasColumnWin(char c) {
             for (var j = 0; j < dimension; j++) {
                 if (board[0, j].Equals(c) &&
                     board[1, j].Equals(c) &&
@@ -66,7 +66,7 @@ namespace TicTacToe {
             return false;
         }
 
-        public bool diagonalIsFilledWithSameCharacter(char c) {
+        public bool hasDiagonalWin(char c) {
             return (board[0, 0].Equals(c) && board[1, 1].Equals(c) && board[2, 2].Equals(c)) ||
                    (board[0, 2].Equals(c) && board[1, 1].Equals(c) && board[2, 0].Equals(c));
         }

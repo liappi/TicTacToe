@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace TicTacToe {
     public class Game {
@@ -11,8 +12,9 @@ namespace TicTacToe {
         private bool gameEnded;
         private Winner winner;
         private GameBoard gameBoard;
-        private Player player1;
-        private Player player2;
+//        private Player player1;
+//        private Player player2;
+        private List<Player> players;
         private Player playerWithCurrentTurn;
 
         public Game() {
@@ -20,8 +22,11 @@ namespace TicTacToe {
             winner = Winner.None;
             
             gameBoard = new GameBoard();
-            player1 = new Player(1);
-            player2 = new Player(2);
+            var player1 = new Player('X');
+            var player2 = new Player('O');
+            
+            players.Add(player1);
+            players.Add(player2);
 
             playerWithCurrentTurn = player1;
         }
@@ -64,29 +69,21 @@ namespace TicTacToe {
             End();
         }
         
-        bool player1HasWon() {
-            return playerHasWon('X');
-        }
-
-        bool player2HasWon() {
-            return playerHasWon('O');
-        }
-
         bool playerHasWon(char c) {
-            return gameBoard.rowIsFilledWithSameCharacter(c) || 
-                   gameBoard.columnIsFilledWithSameCharacter(c) ||
-                   gameBoard.diagonalIsFilledWithSameCharacter(c);
+            return gameBoard.hasRowWin(c) || 
+                   gameBoard.hasColumnWin(c) ||
+                   gameBoard.hasDiagonalWin(c);
         }
 
         void updateGameWinCondition() {
             if (gameBoard.gameIsDrawn()) {
                 gameEnded = true;
             }
-            else if (player1HasWon()) {
+            else if (playerHasWon('X')) {
                 gameEnded = true;
                 winner = Winner.Player1;
             }
-            else if (player2HasWon()) {                 
+            else if (playerHasWon('O')) {                 
                 gameEnded = true;
                 winner = Winner.Player2;
             }
