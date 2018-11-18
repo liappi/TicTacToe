@@ -1,5 +1,4 @@
-./idea
-packages
+.idea/
 TicTacToe.sln
 
 # Build results

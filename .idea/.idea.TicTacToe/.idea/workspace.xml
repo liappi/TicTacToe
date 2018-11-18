@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="235b5979-2e88-49df-8c4f-02edda6793e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TicTacToe/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="235b5979-2e88-49df-8c4f-02edda6793e5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,12 +285,12 @@
       <updated>1542142804889</updated>
       <workItem from="1542142807603" duration="19963000" />
       <workItem from="1542252651036" duration="5488000" />
-      <workItem from="1542278366373" duration="4982000" />
+      <workItem from="1542278366373" duration="5093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30433000" />
+    <option name="totallyTimeSpent" value="30544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
