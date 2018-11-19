@@ -1,3 +1,5 @@
+using System;
+
 namespace TicTacToe {
     public class InputValidator {
         private GameBoard gameBoard;
@@ -6,10 +8,20 @@ namespace TicTacToe {
             this.gameBoard = gameBoard;
         }
         
-        public bool playerInputIsValid(int row, int col) {
-            return row <= GameBoard.dimension && row > 0 &&
-                   col <= GameBoard.dimension && col > 0 &&
-                   gameBoard.board[row - 1, col - 1].Equals('.');
+//        public bool playerInputIsValid(int row, int col) {
+//            return row <= GameBoard.dimension && row > 0 &&
+//                   col <= GameBoard.dimension && col > 0 &&
+//                   gameBoard.board[row - 1, col - 1].Equals('.');
+//        }
+
+        public bool playerInputIsValid(string input) {
+            if (!input.Contains(",")) return false;
+            
+            var coordinates = input.Split(',');
+            var col = Convert.ToInt32(coordinates[0]);
+            var row = Convert.ToInt32(coordinates[1]);
+
+            return row <= GameBoard.dimension && row > 0 && col <= GameBoard.dimension && col > 0 && gameBoard.board[row - 1, col - 1].Equals('.');
         }
     }
 }

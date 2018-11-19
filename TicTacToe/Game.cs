@@ -9,6 +9,7 @@ namespace TicTacToe {
         private Player playerWithCurrentTurn;
         private GameReferee gameReferee;
         private InputValidator inputValidator;
+        private Renderer renderer;
 
         public Game() {
             gameEnded = false;
@@ -17,6 +18,7 @@ namespace TicTacToe {
             players = new List<Player>();
             gameReferee = new GameReferee(gameBoard);
             inputValidator = new InputValidator(gameBoard);
+            renderer = new Renderer();
             
             players.Add(new Player('X'));
             players.Add(new Player('O'));
@@ -33,7 +35,8 @@ namespace TicTacToe {
             while (!gameEnded) {
 
                 while (!playerWithCurrentTurn.inputValid) {
-                    playerWithCurrentTurn.getPlayerInput();
+//                    playerWithCurrentTurn.getPlayerInput();
+                    renderer.getPlayerInput(playerWithCurrentTurn);
 
                     if (playerWithCurrentTurn.givenUp) {
                         Console.WriteLine($"Player has given up.");
@@ -41,12 +44,14 @@ namespace TicTacToe {
                         return;
                     }
 
-                    if (inputValidator.playerInputIsValid(playerWithCurrentTurn.row, playerWithCurrentTurn.col)) {
+                    if (inputValidator.playerInputIsValid(playerWithCurrentTurn.input)) {
                         Console.WriteLine("Move accepted, here's the current board:");
+                        
+                        
                         
                         playerWithCurrentTurn.inputValid = true;
                         gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.symbol,
-                            playerWithCurrentTurn.row, playerWithCurrentTurn.col);
+                            playerWithCurrentTurn.input);
                     }
                     else {
                         Console.WriteLine("Oh no, a piece is already at this place! Try again...");

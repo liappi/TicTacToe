@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 
 namespace TicTacToe {
     public class Player {
@@ -9,6 +8,7 @@ namespace TicTacToe {
         public bool inputValid;
         public bool givenUp;
         public char symbol;
+        public string input;
 
         public Player(char symbol) {
             inputValid = false;
@@ -19,7 +19,7 @@ namespace TicTacToe {
         public void getPlayerInput() {
             Console.Write($"Enter a coord x,y to place your {symbol} or enter 'q' to give up: ");
 
-            var input = Console.ReadLine();
+            input = Console.ReadLine();
 
             if (input.Equals("q")) {
                 givenUp = true;

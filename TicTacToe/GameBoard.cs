@@ -25,7 +25,11 @@ namespace TicTacToe {
             }
         }
 
-        public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
+        public void updateGameBoardWithPlayerInput(char symbol, string input) {
+            var coordinates = input.Split(',');
+            var col = Convert.ToInt32(coordinates[0]);
+            var row = Convert.ToInt32(coordinates[1]);
+            
             board[row - 1, col - 1] = symbol;
         }
     }
