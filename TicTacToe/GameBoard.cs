@@ -26,11 +26,11 @@ namespace TicTacToe {
             }
         }
 
-        public bool playerInputIsValid(int row, int col) {
-            return row <= dimension && row > 0 &&
-                   col <= dimension && col > 0 &&
-                   board[row - 1, col - 1].Equals('.');
-        }
+//        public bool playerInputIsValid(int row, int col) {
+//            return row <= dimension && row > 0 &&
+//                   col <= dimension && col > 0 &&
+//                   board[row - 1, col - 1].Equals('.');
+//        }
 
         public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
             board[row - 1, col - 1] = symbol;

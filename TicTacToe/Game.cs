@@ -8,6 +8,7 @@ namespace TicTacToe {
         private List<Player> players;
         private Player playerWithCurrentTurn;
         private GameReferee gameReferee;
+        private InputValidator inputValidator;
 
         public Game() {
             gameEnded = false;
@@ -15,6 +16,7 @@ namespace TicTacToe {
             gameBoard = new GameBoard();
             players = new List<Player>();
             gameReferee = new GameReferee(gameBoard);
+            inputValidator = new InputValidator(gameBoard);
             
             players.Add(new Player('X'));
             players.Add(new Player('O'));
@@ -39,7 +41,7 @@ namespace TicTacToe {
                         return;
                     }
 
-                    if (gameBoard.playerInputIsValid(playerWithCurrentTurn.row, playerWithCurrentTurn.col)) {
+                    if (inputValidator.playerInputIsValid(playerWithCurrentTurn.row, playerWithCurrentTurn.col)) {
                         Console.WriteLine("Move accepted, here's the current board:");
                         
                         playerWithCurrentTurn.inputValid = true;
