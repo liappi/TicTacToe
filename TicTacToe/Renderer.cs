@@ -23,13 +23,8 @@ namespace TicTacToe {
             Console.WriteLine("Oh no, a piece is already at this place! Try again...");
         }
         
-//        public void getPlayerInput(Player player) {
-//            Console.Write($"Enter a coord x,y to place your {player.symbol} or enter 'q' to give up: ");
-//            player.input = Console.ReadLine();
-//        }
-        
-        public string getPlayerInput(Player player) {
-            Console.Write($"Enter a coord x,y to place your {player.symbol} or enter 'q' to give up: ");
+        public string getPlayerInput(int currentPlayerIndex, Player player) {
+            Console.Write($"Player {currentPlayerIndex}, Enter a coord x,y to place your {player.symbol} or enter 'q' to give up: ");
             return Console.ReadLine();
         }
         

@@ -34,26 +34,32 @@ namespace TicTacToe {
 
             while (!gameEnded) {
                 currentPlayer = players[currentPlayerIndex];
-                var input = renderer.getPlayerInput(currentPlayer);
+                var input = renderer.getPlayerInput(currentPlayerIndex, currentPlayer);
 
                 if (inputValidator.playerHasQuit(input)) {
                     renderer.printQuitMessage(currentPlayerIndex);
                     return;
                 }
 
-                while (!inputValidator.playerInputIsValid(input)) {
-                    renderer.printInvalidInputMessage();
-                    input = renderer.getPlayerInput(currentPlayer);
-                }
-                
+                input = elicitValidInputIfInputInvalid(input);
                 renderer.printInputAcceptedMessage();
                 gameBoard.updateGameBoardWithPlayerInput(currentPlayer.symbol, input);
                 
                 renderer.displayGameBoard(gameBoard);
+                
                 updateGameWinCondition();
                 
                 nextTurn();
             }
+        }
+
+        string elicitValidInputIfInputInvalid(string input) {
+            while (!inputValidator.playerInputIsValid(input)) {
+                renderer.printInvalidInputMessage();
+                input = renderer.getPlayerInput(currentPlayerIndex, currentPlayer);
+            }
+
+            return input;
         }
 
         void updateGameWinCondition() {
