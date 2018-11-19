@@ -35,7 +35,6 @@ namespace TicTacToe {
             while (!gameEnded) {
 
                 while (!playerWithCurrentTurn.inputValid) {
-//                    playerWithCurrentTurn.getPlayerInput();
                     renderer.getPlayerInput(playerWithCurrentTurn);
 
                     if (playerWithCurrentTurn.givenUp) {
@@ -46,8 +45,6 @@ namespace TicTacToe {
 
                     if (inputValidator.playerInputIsValid(playerWithCurrentTurn.input)) {
                         Console.WriteLine("Move accepted, here's the current board:");
-                        
-                        
                         
                         playerWithCurrentTurn.inputValid = true;
                         gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.symbol,
