@@ -1,5 +1,4 @@
 using System;
-using Microsoft.SqlServer.Server;
 
 namespace TicTacToe {
     public class GameBoard {
@@ -25,12 +24,6 @@ namespace TicTacToe {
                 Console.Write("\n");
             }
         }
-
-//        public bool playerInputIsValid(int row, int col) {
-//            return row <= dimension && row > 0 &&
-//                   col <= dimension && col > 0 &&
-//                   board[row - 1, col - 1].Equals('.');
-//        }
 
         public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
             board[row - 1, col - 1] = symbol;

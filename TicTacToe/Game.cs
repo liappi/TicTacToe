@@ -60,23 +60,17 @@ namespace TicTacToe {
                 nextTurn();
             }
         }
-        
-        bool playerHasWon(char c) {
-            return gameReferee.hasRowWin(c) || 
-                   gameReferee.hasColumnWin(c) ||
-                   gameReferee.hasDiagonalWin(c);
-        }
 
         void updateGameWinCondition() {
             if (gameReferee.gameIsDrawn()) {
                 gameEnded = true;
                 Console.WriteLine("The game is a draw.");
             }
-            else if (playerHasWon('X')) {
+            else if (gameReferee.playerHasWon('X')) {
                 gameEnded = true;
                 Console.WriteLine("The winner is player one.");
             }
-            else if (playerHasWon('O')) {                 
+            else if (gameReferee.playerHasWon('O')) {                 
                 gameEnded = true;
                 Console.WriteLine("The winner is player two.");
             }

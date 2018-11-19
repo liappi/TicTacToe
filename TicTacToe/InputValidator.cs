@@ -1,6 +1,6 @@
 namespace TicTacToe {
     public class InputValidator {
-        public GameBoard gameBoard;
+        private GameBoard gameBoard;
 
         public InputValidator(GameBoard gameBoard) {
             this.gameBoard = gameBoard;
