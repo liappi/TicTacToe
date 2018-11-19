@@ -10,6 +10,7 @@ namespace TicTacToe {
         private GameReferee gameReferee;
         private InputValidator inputValidator;
         private Renderer renderer;
+        private int playerIndex;
 
         public Game() {
             gameEnded = false;
@@ -23,23 +24,23 @@ namespace TicTacToe {
             players.Add(new Player('X'));
             players.Add(new Player('O'));
 
-            playerWithCurrentTurn = players[0];
+            playerIndex = 0;
+            playerWithCurrentTurn = players[playerIndex];
         }
 
         public void Start() {
-            Console.WriteLine("Welcome to Tic Tac Toe!");
-            Console.WriteLine("Here's the current board:");
-
+            renderer.printWelcomeMessage();
             renderer.displayGameBoard(gameBoard);
 
             while (!gameEnded) {
-
+                
+                
+                
                 while (!playerWithCurrentTurn.inputValid) {
                     renderer.getPlayerInput(playerWithCurrentTurn);
 
                     if (playerWithCurrentTurn.givenUp) {
-                        Console.WriteLine($"Player has given up.");
-//                        Console.WriteLine($"Player {playerWithCurrentTurn.playerNumber} has given up.");
+                        Console.WriteLine("Player has given up.");
                         return;
                     }
 
@@ -62,6 +63,8 @@ namespace TicTacToe {
                 nextTurn();
             }
         }
+        
+        
 
         void updateGameWinCondition() {
             if (gameReferee.gameIsDrawn()) {
@@ -79,12 +82,14 @@ namespace TicTacToe {
         }
 
         void nextTurn() {
-            if (playerWithCurrentTurn.Equals(players[0])) {
-                playerWithCurrentTurn = players[1];
+            if (playerIndex < players.Count - 1) {
+                playerIndex++;
             }
-            else if (playerWithCurrentTurn.Equals(players[1])) {
-                playerWithCurrentTurn = players[0];
+            else {
+                playerIndex = 0;
             }
+
+            playerWithCurrentTurn = players[playerIndex];
         }
     }
 }

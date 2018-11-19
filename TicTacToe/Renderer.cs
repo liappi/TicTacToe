@@ -6,6 +6,10 @@ namespace TicTacToe {
         public Renderer() {
             
         }
+
+        public void printWelcomeMessage() {
+            Console.WriteLine("Welcome to Tic Tac Toe!");
+        }
         
         public void getPlayerInput(Player player) {
             Console.Write($"Enter a coord x,y to place your {player.symbol} or enter 'q' to give up: ");
@@ -13,6 +17,7 @@ namespace TicTacToe {
         }
         
         public void displayGameBoard(GameBoard gameBoard) {
+            Console.WriteLine("Here's the current board:");
             for (var i = 0; i < GameBoard.dimension; i++) {
                 for (var j = 0; j < GameBoard.dimension; j++) {
                     Console.Write(gameBoard.board[i, j]);
