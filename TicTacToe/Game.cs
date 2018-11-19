@@ -6,11 +6,11 @@ namespace TicTacToe {
         private bool gameEnded;
         private GameBoard gameBoard;
         private List<Player> players;
-//        private Player playerWithCurrentTurn;
         private GameReferee gameReferee;
         private InputValidator inputValidator;
         private Renderer renderer;
         private int currentPlayerIndex;
+        private Player currentPlayer;
 
         public Game() {
             gameEnded = false;
@@ -25,6 +25,7 @@ namespace TicTacToe {
             players.Add(new Player('O'));
 
             currentPlayerIndex = 0;
+            currentPlayer = players[currentPlayerIndex];
         }
 
         public void Start() {
@@ -32,37 +33,28 @@ namespace TicTacToe {
             renderer.displayGameBoard(gameBoard);
 
             while (!gameEnded) {
-                
-                
-                
-                while (!players[currentPlayerIndex].inputValid) {
-                    renderer.getPlayerInput(players[currentPlayerIndex]);
+                currentPlayer = players[currentPlayerIndex];
+                var input = renderer.getPlayerInput(currentPlayer);
 
-                    if (inputValidator.playerHasQuit(players[currentPlayerIndex].input)) {
-                        renderer.printQuitMessage(currentPlayerIndex);
-                    }
-
-                    if (inputValidator.playerInputIsValid(players[currentPlayerIndex].input)) {
-                        renderer.printInputAcceptedMessage();
-                        
-                        players[currentPlayerIndex].inputValid = true;
-                        gameBoard.updateGameBoardWithPlayerInput(players[currentPlayerIndex].symbol,
-                            players[currentPlayerIndex].input);
-                    }
-                    else {
-                        renderer.printInvalidInputMessage();
-                    }
+                if (inputValidator.playerHasQuit(input)) {
+                    renderer.printQuitMessage(currentPlayerIndex);
+                    return;
                 }
 
-                players[currentPlayerIndex].inputValid = false;
+                while (!inputValidator.playerInputIsValid(input)) {
+                    renderer.printInvalidInputMessage();
+                    input = renderer.getPlayerInput(currentPlayer);
+                }
+                
+                renderer.printInputAcceptedMessage();
+                gameBoard.updateGameBoardWithPlayerInput(currentPlayer.symbol, input);
+                
                 renderer.displayGameBoard(gameBoard);
                 updateGameWinCondition();
                 
                 nextTurn();
             }
         }
-        
-        
 
         void updateGameWinCondition() {
             if (gameReferee.gameIsDrawn()) {
