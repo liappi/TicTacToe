@@ -3,9 +3,8 @@ using Microsoft.SqlServer.Server;
 
 namespace TicTacToe {
     public class GameBoard {
-
-        private char[,] board;
-        private const int dimension = 3;
+        public char[,] board;
+        public const int dimension = 3;
        
         public GameBoard() {
             board = new char[dimension, dimension];
@@ -35,47 +34,6 @@ namespace TicTacToe {
 
         public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
             board[row - 1, col - 1] = symbol;
-        }
-
-        public bool hasRowWin(char c) {
-            for (var i = 0; i < dimension; i++) {
-                if (board[i, 0].Equals(c) &&
-                    board[i, 1].Equals(c) &&
-                    board[i, 2].Equals(c) ) {
-                    return true;
-                }
-            }
-    
-            return false;
-        }
-
-        public bool hasColumnWin(char c) {
-            for (var j = 0; j < dimension; j++) {
-                if (board[0, j].Equals(c) &&
-                    board[1, j].Equals(c) &&
-                    board[2, j].Equals(c) ) {
-                    return true;
-                }
-            }
-    
-            return false;
-        }
-
-        public bool hasDiagonalWin(char c) {
-            return (board[0, 0].Equals(c) && board[1, 1].Equals(c) && board[2, 2].Equals(c)) ||
-                   (board[0, 2].Equals(c) && board[1, 1].Equals(c) && board[2, 0].Equals(c));
-        }
-
-        public bool gameIsDrawn() {
-            for (var i = 0; i < dimension; i++) {
-                for (var j = 0; j < dimension; j++) {
-                    if (board[i, j].Equals('.')) {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
         }
     }
 }

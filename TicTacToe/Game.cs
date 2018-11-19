@@ -7,12 +7,14 @@ namespace TicTacToe {
         private GameBoard gameBoard;
         private List<Player> players;
         private Player playerWithCurrentTurn;
+        private GameReferee gameReferee;
 
         public Game() {
             gameEnded = false;
             
             gameBoard = new GameBoard();
             players = new List<Player>();
+            gameReferee = new GameReferee(gameBoard);
             
             players.Add(new Player('X'));
             players.Add(new Player('O'));
@@ -54,19 +56,17 @@ namespace TicTacToe {
                 updateGameWinCondition();
                 
                 nextTurn();
-
             }
-//            End();
         }
         
         bool playerHasWon(char c) {
-            return gameBoard.hasRowWin(c) || 
-                   gameBoard.hasColumnWin(c) ||
-                   gameBoard.hasDiagonalWin(c);
+            return gameReferee.hasRowWin(c) || 
+                   gameReferee.hasColumnWin(c) ||
+                   gameReferee.hasDiagonalWin(c);
         }
 
         void updateGameWinCondition() {
-            if (gameBoard.gameIsDrawn()) {
+            if (gameReferee.gameIsDrawn()) {
                 gameEnded = true;
                 Console.WriteLine("The game is a draw.");
             }
