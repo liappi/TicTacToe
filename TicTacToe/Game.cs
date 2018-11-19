@@ -13,8 +13,6 @@ namespace TicTacToe {
         private bool gameEnded;
         private Winner winner;
         private GameBoard gameBoard;
-//        private Player player1;
-//        private Player player2;
         private List<Player> players;
         private Player playerWithCurrentTurn;
 
@@ -90,11 +88,11 @@ namespace TicTacToe {
         }
 
         void nextTurn() {
-            if (playerWithCurrentTurn.Equals(player1)) {
-                playerWithCurrentTurn = player2;
+            if (playerWithCurrentTurn.Equals(players[0])) {
+                playerWithCurrentTurn = players[1];
             }
-            else if (playerWithCurrentTurn.Equals(player2)) {
-                playerWithCurrentTurn = player1;
+            else if (playerWithCurrentTurn.Equals(players[1])) {
+                playerWithCurrentTurn = players[0];
             }
         }
 
