@@ -15,16 +15,6 @@ namespace TicTacToe {
             }
         }
 
-        public void displayGameBoard() {
-            for (var i = 0; i < dimension; i++) {
-                for (var j = 0; j < dimension; j++) {
-                    Console.Write(board[i, j]);
-                }
-
-                Console.Write("\n");
-            }
-        }
-
         public void updateGameBoardWithPlayerInput(char symbol, string input) {
             var coordinates = input.Split(',');
             var col = Convert.ToInt32(coordinates[0]);

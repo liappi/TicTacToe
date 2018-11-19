@@ -30,7 +30,7 @@ namespace TicTacToe {
             Console.WriteLine("Welcome to Tic Tac Toe!");
             Console.WriteLine("Here's the current board:");
 
-            gameBoard.displayGameBoard();
+            renderer.displayGameBoard(gameBoard);
 
             while (!gameEnded) {
 
@@ -56,7 +56,7 @@ namespace TicTacToe {
                 }
 
                 playerWithCurrentTurn.inputValid = false;
-                gameBoard.displayGameBoard();
+                renderer.displayGameBoard(gameBoard);
                 updateGameWinCondition();
                 
                 nextTurn();
