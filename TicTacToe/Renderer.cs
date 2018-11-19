@@ -22,6 +22,14 @@ namespace TicTacToe {
         public void printInvalidInputMessage() {
             Console.WriteLine("Oh no, a piece is already at this place! Try again...");
         }
+
+        public void printGameDrawnMessage() {
+            Console.WriteLine("The game is a draw.");
+        }
+        
+        public void printWinnerMessage(int currentPlayerIndex) {
+            Console.WriteLine($"The winner is Player {currentPlayerIndex + 1}");
+        }
         
         public string getPlayerInput(int currentPlayerIndex, Player player) {
             Console.Write($"Player {currentPlayerIndex}, Enter a coord x,y to place your {player.symbol} or enter 'q' to give up: ");

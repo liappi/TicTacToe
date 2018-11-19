@@ -65,13 +65,13 @@ namespace TicTacToe {
         void updateGameWinCondition() {
             if (gameReferee.gameIsDrawn()) {
                 gameEnded = true;
-                Console.WriteLine("The game is a draw.");
+                renderer.printGameDrawnMessage();
             }
 
             for (var i = 0; i < players.Count; i++) {
                 if (gameReferee.playerHasWon(players[i].symbol)) {
                     gameEnded = true;
-                    Console.WriteLine($"The winner is Player {i + 1}");
+                    renderer.printWinnerMessage(i);
                 }
             }
         }
