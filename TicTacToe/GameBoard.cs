@@ -34,13 +34,6 @@ namespace TicTacToe {
         }
 
         public void updateGameBoardWithPlayerInput(char symbol, int row, int col) {
-//            if (player == 1) {
-//                board[row - 1, col - 1] = 'X';
-//            }
-//            else if (player == 2) {
-//                board[row - 1, col - 1] = 'O';
-//            }
-            
             board[row - 1, col - 1] = symbol;
         }
 

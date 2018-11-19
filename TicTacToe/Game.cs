@@ -1,26 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace TicTacToe {
     public class Game {
-        private enum Winner {
-            None,
-            Player1,
-            Player2
-        }
-        
         private bool gameEnded;
-        private Winner winner;
         private GameBoard gameBoard;
         private List<Player> players;
         private Player playerWithCurrentTurn;
 
         public Game() {
             gameEnded = false;
-            winner = Winner.None;
             
             gameBoard = new GameBoard();
+            players = new List<Player>();
             
             players.Add(new Player('X'));
             players.Add(new Player('O'));
@@ -64,7 +56,7 @@ namespace TicTacToe {
                 nextTurn();
 
             }
-            End();
+//            End();
         }
         
         bool playerHasWon(char c) {
@@ -76,14 +68,15 @@ namespace TicTacToe {
         void updateGameWinCondition() {
             if (gameBoard.gameIsDrawn()) {
                 gameEnded = true;
+                Console.WriteLine("The game is a draw.");
             }
             else if (playerHasWon('X')) {
                 gameEnded = true;
-                winner = Winner.Player1;
+                Console.WriteLine("The winner is player one.");
             }
             else if (playerHasWon('O')) {                 
                 gameEnded = true;
-                winner = Winner.Player2;
+                Console.WriteLine("The winner is player two.");
             }
         }
 
@@ -95,15 +88,5 @@ namespace TicTacToe {
                 playerWithCurrentTurn = players[0];
             }
         }
-
-        private void End() {
-            if (winner == Winner.None)
-                Console.WriteLine("The game is a draw.");
-            else if (winner == Winner.Player1)
-                Console.WriteLine("The winner is player one.");
-            else if (winner == Winner.Player2) 
-                Console.WriteLine("The winner is player two.");
-        }
-        
     }
 }
