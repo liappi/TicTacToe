@@ -67,13 +67,12 @@ namespace TicTacToe {
                 gameEnded = true;
                 Console.WriteLine("The game is a draw.");
             }
-            else if (gameReferee.playerHasWon('X')) {
-                gameEnded = true;
-                Console.WriteLine("The winner is player one.");
-            }
-            else if (gameReferee.playerHasWon('O')) {                 
-                gameEnded = true;
-                Console.WriteLine("The winner is player two.");
+
+            for (var i = 0; i < players.Count; i++) {
+                if (gameReferee.playerHasWon(players[i].symbol)) {
+                    gameEnded = true;
+                    Console.WriteLine($"The winner is Player {i + 1}");
+                }
             }
         }
 
