@@ -38,20 +38,19 @@ namespace TicTacToe {
                 while (!players[currentPlayerIndex].inputValid) {
                     renderer.getPlayerInput(players[currentPlayerIndex]);
 
-                    if (players[currentPlayerIndex].givenUp) {
-                        Console.WriteLine("Player has given up.");
-                        return;
+                    if (inputValidator.playerHasQuit(players[currentPlayerIndex].input)) {
+                        renderer.printQuitMessage(currentPlayerIndex);
                     }
 
                     if (inputValidator.playerInputIsValid(players[currentPlayerIndex].input)) {
-                        Console.WriteLine("Move accepted, here's the current board:");
+                        renderer.printInputAcceptedMessage();
                         
                         players[currentPlayerIndex].inputValid = true;
                         gameBoard.updateGameBoardWithPlayerInput(players[currentPlayerIndex].symbol,
                             players[currentPlayerIndex].input);
                     }
                     else {
-                        Console.WriteLine("Oh no, a piece is already at this place! Try again...");
+                        renderer.printInvalidInputMessage();
                     }
                 }
 

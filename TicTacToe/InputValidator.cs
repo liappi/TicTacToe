@@ -7,6 +7,10 @@ namespace TicTacToe {
         public InputValidator(GameBoard gameBoard) {
             this.gameBoard = gameBoard;
         }
+
+        public bool playerHasQuit(string input) {
+            return input.Equals("q");
+        }
         
         public bool playerInputIsValid(string input) {
             if (!input.Contains(",")) return false;
