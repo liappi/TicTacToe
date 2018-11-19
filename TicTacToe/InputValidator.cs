@@ -8,12 +8,6 @@ namespace TicTacToe {
             this.gameBoard = gameBoard;
         }
         
-//        public bool playerInputIsValid(int row, int col) {
-//            return row <= GameBoard.dimension && row > 0 &&
-//                   col <= GameBoard.dimension && col > 0 &&
-//                   gameBoard.board[row - 1, col - 1].Equals('.');
-//        }
-
         public bool playerInputIsValid(string input) {
             if (!input.Contains(",")) return false;
             
