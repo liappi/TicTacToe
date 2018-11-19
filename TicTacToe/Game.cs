@@ -6,11 +6,11 @@ namespace TicTacToe {
         private bool gameEnded;
         private GameBoard gameBoard;
         private List<Player> players;
-        private Player playerWithCurrentTurn;
+//        private Player playerWithCurrentTurn;
         private GameReferee gameReferee;
         private InputValidator inputValidator;
         private Renderer renderer;
-        private int playerIndex;
+        private int currentPlayerIndex;
 
         public Game() {
             gameEnded = false;
@@ -24,8 +24,7 @@ namespace TicTacToe {
             players.Add(new Player('X'));
             players.Add(new Player('O'));
 
-            playerIndex = 0;
-            playerWithCurrentTurn = players[playerIndex];
+            currentPlayerIndex = 0;
         }
 
         public void Start() {
@@ -36,27 +35,27 @@ namespace TicTacToe {
                 
                 
                 
-                while (!playerWithCurrentTurn.inputValid) {
-                    renderer.getPlayerInput(playerWithCurrentTurn);
+                while (!players[currentPlayerIndex].inputValid) {
+                    renderer.getPlayerInput(players[currentPlayerIndex]);
 
-                    if (playerWithCurrentTurn.givenUp) {
+                    if (players[currentPlayerIndex].givenUp) {
                         Console.WriteLine("Player has given up.");
                         return;
                     }
 
-                    if (inputValidator.playerInputIsValid(playerWithCurrentTurn.input)) {
+                    if (inputValidator.playerInputIsValid(players[currentPlayerIndex].input)) {
                         Console.WriteLine("Move accepted, here's the current board:");
                         
-                        playerWithCurrentTurn.inputValid = true;
-                        gameBoard.updateGameBoardWithPlayerInput(playerWithCurrentTurn.symbol,
-                            playerWithCurrentTurn.input);
+                        players[currentPlayerIndex].inputValid = true;
+                        gameBoard.updateGameBoardWithPlayerInput(players[currentPlayerIndex].symbol,
+                            players[currentPlayerIndex].input);
                     }
                     else {
                         Console.WriteLine("Oh no, a piece is already at this place! Try again...");
                     }
                 }
 
-                playerWithCurrentTurn.inputValid = false;
+                players[currentPlayerIndex].inputValid = false;
                 renderer.displayGameBoard(gameBoard);
                 updateGameWinCondition();
                 
@@ -82,14 +81,12 @@ namespace TicTacToe {
         }
 
         void nextTurn() {
-            if (playerIndex < players.Count - 1) {
-                playerIndex++;
+            if (currentPlayerIndex < players.Count - 1) {
+                currentPlayerIndex++;
             }
             else {
-                playerIndex = 0;
+                currentPlayerIndex = 0;
             }
-
-            playerWithCurrentTurn = players[playerIndex];
         }
     }
 }
