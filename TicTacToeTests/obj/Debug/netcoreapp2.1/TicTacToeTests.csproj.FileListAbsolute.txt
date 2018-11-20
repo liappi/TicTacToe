@@ -1,0 +1,17 @@
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.csprojAssemblyReference.cache
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.csproj.CoreCompileInputs.cache
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.AssemblyInfoInputs.cache
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.AssemblyInfo.cs
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToeTests.deps.json
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToeTests.runtimeconfig.json
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToeTests.runtimeconfig.dev.json
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToeTests.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToeTests.pdb
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToe.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/bin/Debug/netcoreapp2.1/TicTacToe.pdb
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.csproj.CopyComplete
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.dll
+/Users/vilia.li/Projects/TicTacToe/TicTacToeTests/obj/Debug/netcoreapp2.1/TicTacToeTests.pdb
