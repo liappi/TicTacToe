@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using Microsoft.VisualStudio.TestPlatform.Utilities;
 using Xunit;
 using Xunit.Abstractions;
@@ -50,25 +49,28 @@ namespace TicTacToeTests {
         [InlineData(4, 1, false)]
         public void GivenPositionShouldReturnTrueIfPositionIsPossibleOnBoard(int x, int y, bool expected) {
             var ticTacToe = new TicTacToe();
+            var actual = ticTacToe.inputValidator.PositionPossible(x, y);
             
-        }
-    }
-
-    public class TicTacToe {
-        public string Play() {
-            return "..." +
-                   "..." +
-                   "...";
+            Assert.True(expected.Equals(actual));
         }
 
-        public string MakeMove(int x, int y, char c) {
-            StringBuilder result = new StringBuilder("..." +
-                                                     "..." +
-                                                     "...");
+        [Theory]
+        [InlineData(1, 1, "..." +
+                          "..." +
+                          "...", true)]
+        [InlineData(1, 1, "X.." +
+                          "..." +
+                          "...", false)]
+        [InlineData(2, 1, "X.." +
+                          "..." +
+                          "...", true)]
+        public void GivenPositionShouldReturnTrueIfPositionIsFree(int x, int y, string initialBoard, bool expected) {
+            var ticTacToe = new TicTacToe();
 
-            result[(x - 1) + (y - 1) * 3] = c;
-
-            return result.ToString();
+            var actual = ticTacToe.inputValidator.PositionFree(x, y, initialBoard);
+            Assert.True(expected.Equals(actual));
         }
+        
+        
     }
 }
