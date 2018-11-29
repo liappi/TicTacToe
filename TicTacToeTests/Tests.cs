@@ -51,7 +51,7 @@ namespace TicTacToeTests {
         [InlineData(4, 1, false)]
         public void GivenPositionShouldReturnTrueIfPositionIsPossibleOnBoard(int x, int y, bool expected) {
             var inputValidator = new InputValidator();
-            var actual = inputValidator.PositionPossible(x, y);
+            var actual = inputValidator.HasPositionPossible(x, y);
             Assert.Equal(expected, actual);
         }
 
@@ -67,7 +67,7 @@ namespace TicTacToeTests {
                           "...", true)]
         public void GivenPositionShouldReturnTrueIfPositionIsFree(int x, int y, string initialBoard, bool expected) {
             var inputValidator = new InputValidator();
-            var actual = inputValidator.PositionFree(x, y, initialBoard);
+            var actual = inputValidator.HasPositionFree(x, y, initialBoard);
             Assert.Equal(expected, actual);
         }
 
@@ -102,13 +102,15 @@ namespace TicTacToeTests {
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void GivenQAsPlayerInputShouldQuitGame() {
-            var renderer = new MockRenderer();
-            var actualMessage = renderer.GetPlayerInput("q");
-
-            var expectedMessage = "A player has quit.";
-            Assert.Equal(expectedMessage, actualMessage);
+        [Theory]
+        [InlineData("q", true)]
+        [InlineData("r", false)]
+        [InlineData("1,2", false)]
+        public void GivenQAsPlayerInputShouldReturnHasBeenQuit(string input, bool expected) {
+            var game = new Game();
+            var actual = game.playerHasQuit(input);
+            Assert.Equal(expected, actual);
         }
+        
     }
 }

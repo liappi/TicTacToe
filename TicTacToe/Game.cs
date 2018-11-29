@@ -22,6 +22,11 @@ namespace TicTacToe {
                     "...";
         }
 
+
+        public bool playerHasQuit(string input) {
+            return input.Equals("q");
+        }
+
         public void NextPlayer() {
             if (currentPlayerIndex < players.Count - 1) {
                 currentPlayerIndex++;

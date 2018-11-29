@@ -10,7 +10,7 @@ namespace TicTacToe {
         
         public string MakeMove(int x, int y, string board) {
             StringBuilder result = new StringBuilder(board);
-            result[InputValidator.FindPositionAsElementInString(x, y)] = token;
+            result[InputValidator.MapPositionToBoard(x, y)] = token;
 
             return result.ToString();
         }
